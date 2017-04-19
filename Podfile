@@ -8,5 +8,6 @@ target 'charlesTesting' do
   # Pods for charlesTesting
   
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
 
 end
