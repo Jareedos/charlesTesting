@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         guard FIRAuth.auth()?.currentUser != nil else {
             return
+            //asdf
         }
     }
  
