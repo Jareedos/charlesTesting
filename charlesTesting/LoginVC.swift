@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController {
+class LoginVC: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
@@ -29,7 +29,15 @@ class ViewController: UIViewController {
     }
  
     @IBAction func logInBtnPressed(_ sender: Any) {
+        if let email = emailTextField.text, let pass = passwordTxtField.text, email.characters.count > 0 && pass.characters.count > 0 {
+        AuthService.instance.login(email: email, password: pass)
+        } else {
+            let alert = UIAlertController(title: "Username and Password Required", message: "You must enter both a username and password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
+    
 
     @IBAction func forgotPasswordBtnPressed(_ sender: UIButton) {
     }
