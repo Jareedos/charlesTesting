@@ -17,6 +17,7 @@
 		BF85197E1EA7CD5800B726FC /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF85197D1EA7CD5800B726FC /* RoundedTextField.swift */; };
 		BF8519801EA7D04300B726FC /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF85197F1EA7D04300B726FC /* RoundedButton.swift */; };
 		BF8519821EA809D300B726FC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8519811EA809D300B726FC /* AuthService.swift */; };
+		BF8519861EAA805100B726FC /* JobsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8519851EAA805100B726FC /* JobsVC.swift */; };
 		FB7603ECE6DB7150C2F827B3 /* Pods_charlesTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72DA7DA39C49AECAECD39B2 /* Pods_charlesTesting.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		BF85197D1EA7CD5800B726FC /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		BF85197F1EA7D04300B726FC /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BF8519811EA809D300B726FC /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		BF8519851EAA805100B726FC /* JobsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsVC.swift; sourceTree = "<group>"; };
 		D72DA7DA39C49AECAECD39B2 /* Pods_charlesTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_charlesTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F6A2A52EE3C33F1934844F /* Pods-charlesTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-charlesTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-charlesTesting/Pods-charlesTesting.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 				BF85197D1EA7CD5800B726FC /* RoundedTextField.swift */,
 				BF85197F1EA7D04300B726FC /* RoundedButton.swift */,
 				BF8519811EA809D300B726FC /* AuthService.swift */,
+				BF8519851EAA805100B726FC /* JobsVC.swift */,
 			);
 			path = charlesTesting;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				BF85196D1EA69F6A00B726FC /* charlesTesting.xcdatamodeld in Sources */,
 				BF8519821EA809D300B726FC /* AuthService.swift in Sources */,
 				BF85197E1EA7CD5800B726FC /* RoundedTextField.swift in Sources */,
+				BF8519861EAA805100B726FC /* JobsVC.swift in Sources */,
 				BF8519651EA69F6A00B726FC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

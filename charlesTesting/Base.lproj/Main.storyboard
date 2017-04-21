@@ -106,6 +106,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="logInBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDI-mu-L3H"/>
+                                            <segue destination="fUv-PZ-csw" kind="presentation" identifier="LoginVC" id="ffX-2u-G51"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzG-zM-3XL">
@@ -159,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--JobsVC-->
         <scene sceneID="grC-Qg-Hje">
             <objects>
-                <viewController id="fUv-PZ-csw" sceneMemberID="viewController">
+                <viewController id="fUv-PZ-csw" customClass="JobsVC" customModule="charlesTesting" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eu0-58-qUG"/>
                         <viewControllerLayoutGuide type="bottom" id="h9c-tj-41j"/>
@@ -249,7 +250,7 @@
                                 <rect key="frame" x="0.0" y="96" width="375" height="475"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="99" id="hHt-Fu-nRu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JobsCell" rowHeight="99" id="hHt-Fu-nRu">
                                         <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hHt-Fu-nRu" id="kL3-fZ-3RQ">
@@ -313,10 +314,13 @@
                             <constraint firstItem="MCa-2r-EL2" firstAttribute="top" secondItem="aVE-02-E3n" secondAttribute="bottom" id="zX3-3b-X4b"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="MCa-2r-EL2" id="qnN-Lx-lUt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgL-OQ-uaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738.39999999999998" y="39.130434782608695"/>
+            <point key="canvasLocation" x="772" y="38"/>
         </scene>
     </scenes>
     <resources>

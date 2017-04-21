@@ -23,14 +23,15 @@ class LoginVC: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         guard FIRAuth.auth()?.currentUser != nil else {
+            performSegue(withIdentifier: "JobsVC", sender: nil)
             return
-            //asdf
         }
     }
  
     @IBAction func logInBtnPressed(_ sender: Any) {
         if let email = emailTextField.text, let pass = passwordTxtField.text, email.characters.count > 0 && pass.characters.count > 0 {
         AuthService.instance.login(email: email, password: pass)
+        performSegue(withIdentifier: "JobsVC", sender: nil)
         } else {
             let alert = UIAlertController(title: "Username and Password Required", message: "You must enter both a username and password", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
