@@ -18,33 +18,44 @@ class AuthService {
         return _instance
     }
     
-    func login(email:String, password: String) {
+    func login(email:String, password: String, fromViewController vc: UIViewController, success: @escaping ()->Void) {
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
             
             if let error = error as NSError? {
                 if let errorCode = FIRAuthErrorCode(rawValue: error.code){
                     switch errorCode {
                     case .errorCodeInvalidEmail:
-                        self.createErrorAlert("Invalid Email", msg: "Please enter a valid email")
+                        vc.createErrorAlert("Invalid Email", msg: "Please enter a valid email")
                     case .errorCodeWrongPassword:
-                        self.createErrorAlert("Invalid Password", msg: "Please enter a valid Password")
+                        vc.createErrorAlert("Invalid Password", msg: "Please enter a valid Password")
                     case .errorCodeNetworkError:
-                        self.createErrorAlert("Server Error", msg: "There has been a server error, Please log In again")
+                        vc.createErrorAlert("Server Error", msg: "There has been a server error, Please log In again")
                     default:
-                        self.createErrorAlert("Disabled Account", msg: "Your account has been disabled please contact your company")
+                        vc.createErrorAlert("Disabled Account", msg: "Your account has been disabled please contact your company")
                     }
                     
                 }
+            } else {
+                //Successfully login in
+                success()
             }
         })
-        //Successfully login in
     }
+    
+}
+
+extension UIViewController {
     
     func createErrorAlert(_ title: String, msg: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default , handler: nil)
         alert.addAction(action)
-//        present(alert, animated: true, completion: nil)
-        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapOnBackground() {
+        view.endEditing(true)
     }
 }
+
+

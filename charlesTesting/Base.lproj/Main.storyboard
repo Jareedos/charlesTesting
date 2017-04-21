@@ -64,6 +64,9 @@
                                                 <color key="value" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="3eG-zY-EPh"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uxA-z1-kb9" customClass="RoundedTextField" customModule="charlesTesting" customModuleProvider="target">
                                         <rect key="frame" x="32" y="299" width="310" height="48"/>
@@ -89,6 +92,9 @@
                                                 <color key="value" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="M4u-CI-338"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yp-Cu-Xwy" customClass="RoundedButton" customModule="charlesTesting" customModuleProvider="target">
                                         <rect key="frame" x="87.5" y="373" width="200" height="53"/>
@@ -106,7 +112,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="logInBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDI-mu-L3H"/>
-                                            <segue destination="fUv-PZ-csw" kind="presentation" identifier="LoginVC" id="ffX-2u-G51"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzG-zM-3XL">
@@ -121,6 +126,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.24705882352941178" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="VKI-Ct-gx0" firstAttribute="top" secondItem="Grb-up-Qei" secondAttribute="top" constant="35" id="2VZ-ft-Grz"/>
                                     <constraint firstItem="xzG-zM-3XL" firstAttribute="top" secondItem="2Yp-Cu-Xwy" secondAttribute="bottom" constant="5" id="4zl-ys-vPb"/>
@@ -135,6 +141,9 @@
                                     <constraint firstItem="sqt-cJ-81U" firstAttribute="centerX" secondItem="Grb-up-Qei" secondAttribute="centerX" id="n8G-3c-4dr"/>
                                     <constraint firstItem="uxA-z1-kb9" firstAttribute="centerX" secondItem="Grb-up-Qei" secondAttribute="centerX" id="ufJ-cZ-Keb"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qHO-N6-KQp" appends="YES" id="8Fw-ZB-RG1"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -154,9 +163,15 @@
                         <outlet property="emailTextField" destination="sqt-cJ-81U" id="s8s-3j-vlh"/>
                         <outlet property="forgotPasswordBtn" destination="xzG-zM-3XL" id="0ag-hz-ej7"/>
                         <outlet property="passwordTxtField" destination="uxA-z1-kb9" id="B6M-LQ-3kB"/>
+                        <segue destination="fUv-PZ-csw" kind="presentation" identifier="JobsVC" id="jDb-BX-4pu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qHO-N6-KQp">
+                    <connections>
+                        <action selector="didTapOnBackground" destination="BYZ-38-t0r" id="zjh-pr-MfR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
@@ -257,19 +272,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="98.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyM-Xz-ZFF">
+                                                    <rect key="frame" x="5" y="5" width="365" height="88.5"/>
+                                                    <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Westbrook Bridge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-X0-hn9">
                                                     <rect key="frame" x="14" y="8" width="160" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="160" id="yUZ-Oe-vLK"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Sections" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VZ-dl-YNX">
-                                                    <rect key="frame" x="278" y="8" width="89" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="89" id="AtR-Ya-y63"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                                     <nil key="textColor"/>
@@ -284,18 +294,31 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Sections" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VZ-dl-YNX">
+                                                    <rect key="frame" x="278" y="8" width="89" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="89" id="AtR-Ya-y63"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NLn-X0-hn9" firstAttribute="top" secondItem="kL3-fZ-3RQ" secondAttribute="topMargin" id="0Be-2d-rjb"/>
                                                 <constraint firstItem="711-Dt-I8H" firstAttribute="leading" secondItem="kL3-fZ-3RQ" secondAttribute="leadingMargin" id="0jr-mh-cY7"/>
                                                 <constraint firstItem="9VZ-dl-YNX" firstAttribute="top" secondItem="kL3-fZ-3RQ" secondAttribute="topMargin" id="4wH-m0-ydq"/>
+                                                <constraint firstItem="lyM-Xz-ZFF" firstAttribute="top" secondItem="kL3-fZ-3RQ" secondAttribute="top" constant="5" id="Lh1-8x-kis"/>
+                                                <constraint firstAttribute="bottom" secondItem="lyM-Xz-ZFF" secondAttribute="bottom" constant="5" id="TdU-hJ-lGI"/>
+                                                <constraint firstAttribute="trailing" secondItem="lyM-Xz-ZFF" secondAttribute="trailing" constant="5" id="VTp-Ib-xPd"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="711-Dt-I8H" secondAttribute="bottom" constant="1" id="VdD-sE-V4j"/>
                                                 <constraint firstItem="9VZ-dl-YNX" firstAttribute="trailing" secondItem="kL3-fZ-3RQ" secondAttribute="trailingMargin" id="f8F-c8-IJL"/>
+                                                <constraint firstItem="lyM-Xz-ZFF" firstAttribute="leading" secondItem="kL3-fZ-3RQ" secondAttribute="leading" constant="5" id="ls1-9S-LSx"/>
                                                 <constraint firstItem="NLn-X0-hn9" firstAttribute="leading" secondItem="kL3-fZ-3RQ" secondAttribute="leadingMargin" constant="6" id="ppO-gB-1Xh"/>
                                                 <constraint firstItem="711-Dt-I8H" firstAttribute="trailing" secondItem="kL3-fZ-3RQ" secondAttribute="trailingMargin" id="ybk-vQ-RNB"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.74509803919999995" green="0.74509803919999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -320,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgL-OQ-uaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="38"/>
+            <point key="canvasLocation" x="772" y="37.331334332833585"/>
         </scene>
     </scenes>
     <resources>
