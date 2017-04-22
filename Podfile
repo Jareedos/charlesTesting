@@ -9,5 +9,8 @@ target 'charlesTesting' do
   
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'SwiftyJSON'
+    pod 'FirebaseUI/Database'
 
 end

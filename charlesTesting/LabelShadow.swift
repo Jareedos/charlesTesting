@@ -12,10 +12,10 @@ import UIKit
 class LabelShadow: UILabel {
     @IBInspectable var borderShadow: UIColor? {
         didSet {
-            layer.shadowRadius = 10.0
-            layer.shadowColor = UIColor.black.cgColor
-            layer.shadowOffset = CGSize(width: 1, height: 2)
-            layer.shadowOpacity = 1.0
+            layer.shadowColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.6).cgColor
+            layer.shadowOpacity = 0.8
+            layer.shadowRadius = 5
+            layer.shadowOffset = CGSize(width: 1, height: 1)
         }
     }
    

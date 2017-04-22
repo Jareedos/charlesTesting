@@ -7,32 +7,35 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseDatabaseUI
 
-class JobsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class JobsVC: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
-
-
+    
+    var dataSource : FUITableViewDataSource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
-        tableView.dataSource = self
-    
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "JobsCell", for: indexPath)
+        tableView.dataSource = dataSource
         
-        return cell
+        dataSource = CardTableViewDataSource.dataSource(tableView: tableView, query: JobsRepository.findAll(), configureCell: { (cell: CardTableViewCell, snapshot: FIRDataSnapshot) in
+            cell.configure(withJob: Job(snapshot: snapshot))
+        })
+        dataSource?.bind(to: tableView)
     }
-
-
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let snapshot = dataSource?.snapshot(at: indexPath.row) {
+            let job = Job(snapshot: snapshot)
+            // Navigate to the next screen
+        }
+        
+    }
+    
+    
 }
