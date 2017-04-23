@@ -1,5 +1,5 @@
 //
-//  SectionsVC.swift
+//  SubsectionVC.swift
 //  charlesTesting
 //
 //  Created by Jared Sobol on 4/22/17.
@@ -10,10 +10,9 @@ import UIKit
 import FirebaseDatabase
 import FirebaseDatabaseUI
 
-class SectionsVC: UIViewController, UITableViewDelegate {
+class SubsectionVC: UIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
 
-   
     var dataSource : FUITableViewDataSource?
     
     override func viewDidLoad() {
@@ -37,7 +36,7 @@ class SectionsVC: UIViewController, UITableViewDelegate {
         }
         
     }
-
     
+
 
 }

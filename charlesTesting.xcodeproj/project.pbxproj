@@ -28,6 +28,8 @@
 		BF85199C1EABB9CE00B726FC /* CardTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF85199B1EABB9CE00B726FC /* CardTableViewDataSource.swift */; };
 		BF85199E1EABBAB800B726FC /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF85199D1EABBAB800B726FC /* JobsRepository.swift */; };
 		BF8519A21EAC541C00B726FC /* CreateNewTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8519A11EAC541C00B726FC /* CreateNewTestTableViewCell.xib */; };
+		BF8519A41EAC66D000B726FC /* SectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8519A31EAC66D000B726FC /* SectionsVC.swift */; };
+		BF8519A61EAC68C200B726FC /* SubsectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8519A51EAC68C200B726FC /* SubsectionsVC.swift */; };
 		FB7603ECE6DB7150C2F827B3 /* Pods_charlesTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72DA7DA39C49AECAECD39B2 /* Pods_charlesTesting.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		BF85199B1EABB9CE00B726FC /* CardTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewDataSource.swift; sourceTree = "<group>"; };
 		BF85199D1EABBAB800B726FC /* JobsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
 		BF8519A11EAC541C00B726FC /* CreateNewTestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateNewTestTableViewCell.xib; sourceTree = "<group>"; };
+		BF8519A31EAC66D000B726FC /* SectionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsVC.swift; sourceTree = "<group>"; };
+		BF8519A51EAC68C200B726FC /* SubsectionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubsectionsVC.swift; sourceTree = "<group>"; };
 		D72DA7DA39C49AECAECD39B2 /* Pods_charlesTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_charlesTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F6A2A52EE3C33F1934844F /* Pods-charlesTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-charlesTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-charlesTesting/Pods-charlesTesting.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +136,8 @@
 				BF8519971EABB71D00B726FC /* Model.swift */,
 				BF85199D1EABBAB800B726FC /* JobsRepository.swift */,
 				BF8519A11EAC541C00B726FC /* CreateNewTestTableViewCell.xib */,
+				BF8519A31EAC66D000B726FC /* SectionsVC.swift */,
+				BF8519A51EAC68C200B726FC /* SubsectionsVC.swift */,
 			);
 			path = charlesTesting;
 			sourceTree = "<group>";
@@ -277,11 +283,13 @@
 				BF8519941EABAC5500B726FC /* ButtonWithShadow.swift in Sources */,
 				BF85199E1EABBAB800B726FC /* JobsRepository.swift in Sources */,
 				BF85196D1EA69F6A00B726FC /* charlesTesting.xcdatamodeld in Sources */,
+				BF8519A61EAC68C200B726FC /* SubsectionsVC.swift in Sources */,
 				BF8519981EABB71D00B726FC /* Model.swift in Sources */,
 				BF8519921EAABE7B00B726FC /* Constants.swift in Sources */,
 				BF85199C1EABB9CE00B726FC /* CardTableViewDataSource.swift in Sources */,
 				BF8519961EABB4CF00B726FC /* CardTableViewCell.swift in Sources */,
 				BF8519821EA809D300B726FC /* AuthService.swift in Sources */,
+				BF8519A41EAC66D000B726FC /* SectionsVC.swift in Sources */,
 				BF85197E1EA7CD5800B726FC /* RoundedTextField.swift in Sources */,
 				BF8519861EAA805100B726FC /* JobsVC.swift in Sources */,
 				BF8519651EA69F6A00B726FC /* AppDelegate.swift in Sources */,
