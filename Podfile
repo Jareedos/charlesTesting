@@ -12,5 +12,4 @@ target 'charlesTesting' do
     pod 'Firebase/Database'
     pod 'SwiftyJSON'
     pod 'FirebaseUI/Database'
-
 end

@@ -27,6 +27,7 @@
 		BF85199A1EABB8E600B726FC /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8519991EABB8E600B726FC /* CardTableViewCell.xib */; };
 		BF85199C1EABB9CE00B726FC /* CardTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF85199B1EABB9CE00B726FC /* CardTableViewDataSource.swift */; };
 		BF85199E1EABBAB800B726FC /* JobsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF85199D1EABBAB800B726FC /* JobsRepository.swift */; };
+		BF8519A21EAC541C00B726FC /* CreateNewTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8519A11EAC541C00B726FC /* CreateNewTestTableViewCell.xib */; };
 		FB7603ECE6DB7150C2F827B3 /* Pods_charlesTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72DA7DA39C49AECAECD39B2 /* Pods_charlesTesting.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		BF8519991EABB8E600B726FC /* CardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
 		BF85199B1EABB9CE00B726FC /* CardTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewDataSource.swift; sourceTree = "<group>"; };
 		BF85199D1EABBAB800B726FC /* JobsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsRepository.swift; sourceTree = "<group>"; };
+		BF8519A11EAC541C00B726FC /* CreateNewTestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateNewTestTableViewCell.xib; sourceTree = "<group>"; };
 		D72DA7DA39C49AECAECD39B2 /* Pods_charlesTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_charlesTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F6A2A52EE3C33F1934844F /* Pods-charlesTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-charlesTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-charlesTesting/Pods-charlesTesting.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 				BF8519991EABB8E600B726FC /* CardTableViewCell.xib */,
 				BF8519971EABB71D00B726FC /* Model.swift */,
 				BF85199D1EABBAB800B726FC /* JobsRepository.swift */,
+				BF8519A11EAC541C00B726FC /* CreateNewTestTableViewCell.xib */,
 			);
 			path = charlesTesting;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				BF85197C1EA6E1E900B726FC /* GoogleService-Info.plist in Resources */,
 				BF85199A1EABB8E600B726FC /* CardTableViewCell.xib in Resources */,
 				BF85196F1EA69F6A00B726FC /* Assets.xcassets in Resources */,
+				BF8519A21EAC541C00B726FC /* CreateNewTestTableViewCell.xib in Resources */,
 				BF85196A1EA69F6A00B726FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

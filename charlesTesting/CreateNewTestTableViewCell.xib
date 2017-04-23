@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="ZlO-Bc-x0i">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZlO-Bc-x0i" id="7Lp-tH-jte">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="64.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSO-vX-IXb" customClass="RoundedView" customModule="charlesTesting" customModuleProvider="target">
+                        <rect key="frame" x="4" y="4" width="372" height="56.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyU-iZ-iuT" customClass="LabelShadow" customModule="charlesTesting" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="356" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.54417700670000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xyU-iZ-iuT" secondAttribute="trailing" constant="8" id="Sty-jV-M4T"/>
+                            <constraint firstItem="xyU-iZ-iuT" firstAttribute="leading" secondItem="wSO-vX-IXb" secondAttribute="leading" constant="8" id="ZyS-RN-xQM"/>
+                            <constraint firstAttribute="bottom" secondItem="xyU-iZ-iuT" secondAttribute="bottom" constant="8" id="ffS-yr-MTe"/>
+                            <constraint firstItem="xyU-iZ-iuT" firstAttribute="top" secondItem="wSO-vX-IXb" secondAttribute="top" constant="8" id="jpH-i2-Cmk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wSO-vX-IXb" secondAttribute="trailing" constant="4" id="48I-JU-lNP"/>
+                    <constraint firstItem="wSO-vX-IXb" firstAttribute="leading" secondItem="7Lp-tH-jte" secondAttribute="leading" constant="4" id="Dh0-Su-ekN"/>
+                    <constraint firstAttribute="bottom" secondItem="wSO-vX-IXb" secondAttribute="bottom" constant="4" id="q1f-tk-Gqb"/>
+                    <constraint firstItem="wSO-vX-IXb" firstAttribute="top" secondItem="7Lp-tH-jte" secondAttribute="top" constant="4" id="tBy-is-2ty"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="69" y="42.5"/>
+        </tableViewCell>
+    </objects>
+</document>
