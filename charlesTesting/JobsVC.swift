@@ -33,8 +33,14 @@ class JobsVC: UIViewController, UITableViewDelegate {
         if let snapshot = dataSource?.snapshot(at: indexPath.row) {
             let job = Job(snapshot: snapshot)
             // Navigate to the next screen
+            performSegue(withIdentifier: "SectionsVC", sender: job)
         }
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SectionsVC {
+            vc.job = sender as? Job
+        }
     }
     
     

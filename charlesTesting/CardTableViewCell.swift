@@ -16,7 +16,8 @@ class CardTableViewCell: UITableViewCell {
     }
     
     @IBOutlet weak var titleLabel : UILabel?
-    
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var numberOfItemsLabel: UILabel!
     
     func configure(anything: Any) {
         if let job = anything as? Job {
@@ -24,6 +25,9 @@ class CardTableViewCell: UITableViewCell {
         }
         if let section = anything as? Section {
             configure(withSection: section)
+        }
+        if let subSection = anything as? SubSection {
+            configure(withSubSection: subSection)
         }
         if let test = anything as? Test {
             configure(withTest: test)
@@ -35,15 +39,25 @@ class CardTableViewCell: UITableViewCell {
     
     func configure(withString string: String) {
         titleLabel?.text = string
+
     }
     func configure(withJob job: Job) {
         titleLabel?.text = job.title
+        numberOfItemsLabel?.text = "\(job.sectionCount) Sections"
+        subtitleLabel?.text = job.location
     }
     func configure(withSection section: Section) {
         titleLabel?.text = section.title
+        numberOfItemsLabel?.text = "\(section.subSectionCount) SubSections"
+        subtitleLabel?.text = section.jobTitle
+    }
+    func configure(withSubSection subSection: SubSection) {
+        titleLabel?.text = subSection.title
+        numberOfItemsLabel?.text = "\(subSection.testCount) Tests"
+        subtitleLabel?.text = subSection.jobTitle
     }
     func configure(withTest test: Test) {
-        
+        titleLabel?.text = test.title
     }
 
 }

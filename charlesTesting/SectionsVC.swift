@@ -16,14 +16,18 @@ class SectionsVC: UIViewController, UITableViewDelegate {
    
     var dataSource : FUITableViewDataSource?
     
+    var job: Job!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = dataSource
         
-        dataSource = CardTableViewDataSource.dataSource(tableView: tableView, query: JobsRepository.findAll(), configureCell: { (cell: CardTableViewCell, snapshot: FIRDataSnapshot) in
-            cell.configure(withJob: Job(snapshot: snapshot))
+        dataSource = CardTableViewDataSource.dataSource(tableView: tableView, query: SectionsRepository.findAll(job: job), configureCell: { [weak self] (cell: CardTableViewCell, snapshot: FIRDataSnapshot) in
+            let section = Section(snapshot: snapshot)
+            section.jobTitle = self?.job.title // Assign the title (so we don't need to keep that redundant information in the database)
+            cell.configure(anything: section)
         })
         dataSource?.bind(to: tableView)
     }
@@ -32,10 +36,16 @@ class SectionsVC: UIViewController, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let snapshot = dataSource?.snapshot(at: indexPath.row) {
-            let job = Job(snapshot: snapshot)
+            let section = Section(snapshot: snapshot)
             // Navigate to the next screen
+            performSegue(withIdentifier: "SubsectionsVC", sender: section)
         }
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SubsectionsVC {
+            vc.section = sender as? Section
+        }
     }
 
     
