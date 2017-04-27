@@ -43,21 +43,36 @@ class CardTableViewCell: UITableViewCell {
     }
     func configure(withJob job: Job) {
         titleLabel?.text = job.title
-        numberOfItemsLabel?.text = "\(job.sectionCount) Sections"
+        if job.sectionCount == 1 {
+          numberOfItemsLabel?.text = "\(job.sectionCount) Section"
+        } else {
+          numberOfItemsLabel?.text = "\(job.sectionCount) Sections"
+        }
         subtitleLabel?.text = job.location
     }
     func configure(withSection section: Section) {
         titleLabel?.text = section.title
+        if section.subSectionCount == 1 {
+        numberOfItemsLabel?.text = "\(section.subSectionCount) SubSection"
+        } else {
         numberOfItemsLabel?.text = "\(section.subSectionCount) SubSections"
+        }
         subtitleLabel?.text = section.jobTitle
     }
     func configure(withSubSection subSection: SubSection) {
         titleLabel?.text = subSection.title
+        if subSection.testCount == 1 {
+        numberOfItemsLabel?.text = "\(subSection.testCount) Test"
+        } else {
         numberOfItemsLabel?.text = "\(subSection.testCount) Tests"
+        }
         subtitleLabel?.text = subSection.jobTitle
     }
+    
     func configure(withTest test: Test) {
         titleLabel?.text = test.title
+        numberOfItemsLabel?.text = test.versionDate
+        subtitleLabel?.text = test.standardTitle
     }
 
 }
