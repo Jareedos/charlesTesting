@@ -1,8 +1,8 @@
 //
-//  SubSectionVC.swift
+//  TestsVC.swift
 //  charlesTesting
 //
-//  Created by Jared Sobol on 4/22/17.
+//  Created by Jared Sobol on 4/26/17.
 //  Copyright © 2017 Appmaker. All rights reserved.
 //
 
@@ -10,11 +10,10 @@ import UIKit
 import FirebaseDatabase
 import FirebaseDatabaseUI
 
-class SubSectionsVC: UIViewController, UITableViewDelegate {
-    @IBOutlet weak var tableView: UITableView!
-
+class TestsVC : UIViewController, UITableViewDelegate {
     var dataSource : FUITableViewDataSource?
-    var section : Section!
+    @IBOutlet weak var tableView: UITableView!
+    var subSection: SubSection!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +21,7 @@ class SubSectionsVC: UIViewController, UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = dataSource
         
-        dataSource = CardTableViewDataSource.dataSource(tableView: tableView, query: SubSectionsRepository.findAll(section: section), configureCell: { (cell: CardTableViewCell, snapshot: FIRDataSnapshot) in
+        dataSource = CardTableViewDataSource.dataSource(tableView: tableView, query: JobsRepository.findAll(), configureCell: { (cell: CardTableViewCell, snapshot: FIRDataSnapshot) in
             cell.configure(withJob: Job(snapshot: snapshot))
         })
         dataSource?.bind(to: tableView)
@@ -30,7 +29,6 @@ class SubSectionsVC: UIViewController, UITableViewDelegate {
     
     // MARK: - UITableViewDelegate
     
-    // TODO: segue to test VC
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let snapshot = dataSource?.snapshot(at: indexPath.row) {
             let job = Job(snapshot: snapshot)
@@ -40,11 +38,11 @@ class SubSectionsVC: UIViewController, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? SectionsVC {
-            vc.job = sender as? Job
+        if let vc = segue.destination as? TestsVC {
+            vc.subSection = sender as? SubSection
         }
     }
     
-
-
 }
+    
+
