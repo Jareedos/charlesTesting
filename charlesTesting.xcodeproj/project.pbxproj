@@ -11,6 +11,7 @@
 		BF2E484F1EAE887F0059CE7E /* SubSectionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2E484E1EAE887F0059CE7E /* SubSectionsRepository.swift */; };
 		BF2E48511EAE89040059CE7E /* TestsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2E48501EAE89040059CE7E /* TestsRepository.swift */; };
 		BF2E48531EB175520059CE7E /* TestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2E48521EB175520059CE7E /* TestsVC.swift */; };
+		BF2E48551EB3F2A30059CE7E /* RightLeftSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2E48541EB3F2A30059CE7E /* RightLeftSegue.swift */; };
 		BF8519651EA69F6A00B726FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8519641EA69F6A00B726FC /* AppDelegate.swift */; };
 		BF8519671EA69F6A00B726FC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8519661EA69F6A00B726FC /* LoginVC.swift */; };
 		BF85196A1EA69F6A00B726FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8519681EA69F6A00B726FC /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		BF2E484E1EAE887F0059CE7E /* SubSectionsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSectionsRepository.swift; sourceTree = "<group>"; };
 		BF2E48501EAE89040059CE7E /* TestsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsRepository.swift; sourceTree = "<group>"; };
 		BF2E48521EB175520059CE7E /* TestsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsVC.swift; sourceTree = "<group>"; };
+		BF2E48541EB3F2A30059CE7E /* RightLeftSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightLeftSegue.swift; sourceTree = "<group>"; };
 		BF8519611EA69F6A00B726FC /* charlesTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = charlesTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8519641EA69F6A00B726FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF8519661EA69F6A00B726FC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				BF8519A11EAC541C00B726FC /* CreateNewTestTableViewCell.xib */,
 				BF8519A31EAC66D000B726FC /* SectionsVC.swift */,
 				BF8519A51EAC68C200B726FC /* SubSectionsVC.swift */,
+				BF2E48541EB3F2A30059CE7E /* RightLeftSegue.swift */,
 			);
 			path = charlesTesting;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				BF8519801EA7D04300B726FC /* RoundedButton.swift in Sources */,
 				BF85198E1EAAB01A00B726FC /* RoundedView.swift in Sources */,
 				BF85198A1EAAAE1000B726FC /* LabelShadow.swift in Sources */,
+				BF2E48551EB3F2A30059CE7E /* RightLeftSegue.swift in Sources */,
 				BF2E484D1EAE88250059CE7E /* SectionsRepository.swift in Sources */,
 				BF8519A81EAD150D00B726FC /* CreateATestVC.swift in Sources */,
 				BF8519941EABAC5500B726FC /* ButtonWithShadow.swift in Sources */,
