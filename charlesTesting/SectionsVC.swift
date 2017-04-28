@@ -43,7 +43,7 @@ class SectionsVC: UIViewController, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? SubsectionsVC {
+        if let vc = segue.destination as? SubSectionsVC {
             vc.section = sender as? Section
         }
     }
