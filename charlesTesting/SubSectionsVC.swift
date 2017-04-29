@@ -28,6 +28,15 @@ class SubSectionsVC: UIViewController, UITableViewDelegate {
         dataSource?.bind(to: tableView)
     }
     
+    @IBAction func prepareforUnwind (segue:UIStoryboardSegue) {
+        
+    }
+    
+    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        let segue = LeftRightSegue(identifier: unwindSegue.identifier, source: unwindSegue.source, destination: unwindSegue.destination)
+        segue.perform()
+    }
+    
     // MARK: - UITableViewDelegate
     
     // TODO: segue to test VC
