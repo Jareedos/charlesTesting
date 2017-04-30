@@ -37,6 +37,8 @@
 		BF8519A41EAC66D000B726FC /* SectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8519A31EAC66D000B726FC /* SectionsVC.swift */; };
 		BF8519A61EAC68C200B726FC /* SubSectionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8519A51EAC68C200B726FC /* SubSectionsVC.swift */; };
 		BF8519A81EAD150D00B726FC /* CreateATestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8519A71EAD150D00B726FC /* CreateATestVC.swift */; };
+		BF8DC96B1EB6445A00F9AEE1 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DC96A1EB6445A00F9AEE1 /* UIViewController+Extension.swift */; };
+		BF8DC96D1EB64E1200F9AEE1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DC96C1EB64E1200F9AEE1 /* MenuViewController.swift */; };
 		FB7603ECE6DB7150C2F827B3 /* Pods_charlesTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D72DA7DA39C49AECAECD39B2 /* Pods_charlesTesting.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		BF8519A31EAC66D000B726FC /* SectionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsVC.swift; sourceTree = "<group>"; };
 		BF8519A51EAC68C200B726FC /* SubSectionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSectionsVC.swift; sourceTree = "<group>"; };
 		BF8519A71EAD150D00B726FC /* CreateATestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateATestVC.swift; sourceTree = "<group>"; };
+		BF8DC96A1EB6445A00F9AEE1 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		BF8DC96C1EB64E1200F9AEE1 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		D72DA7DA39C49AECAECD39B2 /* Pods_charlesTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_charlesTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F6A2A52EE3C33F1934844F /* Pods-charlesTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-charlesTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-charlesTesting/Pods-charlesTesting.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,7 @@
 				BF8519A11EAC541C00B726FC /* CreateNewTestTableViewCell.xib */,
 				BF8519A31EAC66D000B726FC /* SectionsVC.swift */,
 				BF8519A51EAC68C200B726FC /* SubSectionsVC.swift */,
+				BF8DC96C1EB64E1200F9AEE1 /* MenuViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				BF8519811EA809D300B726FC /* AuthService.swift */,
 				BF8519971EABB71D00B726FC /* Model.swift */,
 				BF2E484B1EAE880B0059CE7E /* Firebase Repositories */,
+				BF8DC96A1EB6445A00F9AEE1 /* UIViewController+Extension.swift */,
 			);
 			path = charlesTesting;
 			sourceTree = "<group>";
@@ -323,10 +329,12 @@
 			files = (
 				BF2E484F1EAE887F0059CE7E /* SubSectionsRepository.swift in Sources */,
 				BF8519671EA69F6A00B726FC /* LoginVC.swift in Sources */,
+				BF8DC96B1EB6445A00F9AEE1 /* UIViewController+Extension.swift in Sources */,
 				BF8519801EA7D04300B726FC /* RoundedButton.swift in Sources */,
 				BF85198E1EAAB01A00B726FC /* RoundedView.swift in Sources */,
 				BF85198A1EAAAE1000B726FC /* LabelShadow.swift in Sources */,
 				BF2E48551EB3F2A30059CE7E /* RightLeftSegue.swift in Sources */,
+				BF8DC96D1EB64E1200F9AEE1 /* MenuViewController.swift in Sources */,
 				BF2E484D1EAE88250059CE7E /* SectionsRepository.swift in Sources */,
 				BF8519A81EAD150D00B726FC /* CreateATestVC.swift in Sources */,
 				BF8519941EABAC5500B726FC /* ButtonWithShadow.swift in Sources */,
@@ -469,7 +477,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9363EDD86A2DE9111B7FC777 /* Pods-charlesTesting.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = charlesTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -483,7 +491,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2F6A2A52EE3C33F1934844F /* Pods-charlesTesting.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = charlesTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

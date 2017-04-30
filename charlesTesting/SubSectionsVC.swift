@@ -41,10 +41,11 @@ class SubSectionsVC: UIViewController, UITableViewDelegate {
     
     // TODO: segue to test VC
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if let snapshot = dataSource?.snapshot(at: indexPath.row) {
             let job = Job(snapshot: snapshot)
             // Navigate to the next screen
-            performSegue(withIdentifier: "SectionsVC", sender: job)
+            performSegue(withIdentifier: "TestsVC", sender: job)
         }
     }
     

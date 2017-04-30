@@ -22,10 +22,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-//        guard FIRAuth.auth()?.currentUser != nil else {
-//            performSegue(withIdentifier: "JobsVC", sender: nil)
-//            return
-//        }
+        if let _ = FIRAuth.auth()?.currentUser {
+            performSegue(withIdentifier: "JobsVC", sender: nil)
+        }
     }
  
     @IBAction func logInBtnPressed(_ sender: Any) {

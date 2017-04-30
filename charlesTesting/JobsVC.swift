@@ -35,10 +35,13 @@ class JobsVC: UIViewController, UITableViewDelegate {
         let segue = LeftRightSegue(identifier: unwindSegue.identifier, source: unwindSegue.source, destination: unwindSegue.destination)
         segue.perform()
     }
+   
     
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         if let snapshot = dataSource?.snapshot(at: indexPath.row) {
             let job = Job(snapshot: snapshot)
             // Navigate to the next screen

@@ -44,6 +44,7 @@ class SectionsVC: UIViewController, UITableViewDelegate {
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if let snapshot = dataSource?.snapshot(at: indexPath.row) {
             let section = Section(snapshot: snapshot)
             // Navigate to the next screen

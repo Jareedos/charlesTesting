@@ -39,10 +39,11 @@ class TestsVC : UIViewController, UITableViewDelegate {
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if let snapshot = dataSource?.snapshot(at: indexPath.row) {
             let job = Job(snapshot: snapshot)
             // Navigate to the next screen
-            performSegue(withIdentifier: "SectionsVC", sender: job)
+            performSegue(withIdentifier: "CreateATestVC", sender: job)
         }
     }
     
