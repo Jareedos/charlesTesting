@@ -8,10 +8,14 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+
+    
     var menuShowing = false
+    let lblTitleArray = ["Home", "Account", "Partnerships", "Legal Disclaimer"]
     
     static func instantiate() -> MenuViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
@@ -19,7 +23,8 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +58,20 @@ class MenuViewController: UIViewController {
             }, completion: { (finished: Bool) in
             self.dismiss(animated: false, completion: nil)
         })
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lblTitleArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as! MenuTableViewCell
+        cell.menuTitleLbl.text = lblTitleArray[indexPath.row]
+        return cell
     }
 
 }

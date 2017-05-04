@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2770571EB6AF5E00522CC2 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2770561EB6AF5E00522CC2 /* MenuTableViewCell.swift */; };
 		BF2E484D1EAE88250059CE7E /* SectionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2E484C1EAE88250059CE7E /* SectionsRepository.swift */; };
 		BF2E484F1EAE887F0059CE7E /* SubSectionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2E484E1EAE887F0059CE7E /* SubSectionsRepository.swift */; };
 		BF2E48511EAE89040059CE7E /* TestsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2E48501EAE89040059CE7E /* TestsRepository.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		9363EDD86A2DE9111B7FC777 /* Pods-charlesTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-charlesTesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-charlesTesting/Pods-charlesTesting.debug.xcconfig"; sourceTree = "<group>"; };
+		BF2770561EB6AF5E00522CC2 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		BF2E484C1EAE88250059CE7E /* SectionsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsRepository.swift; sourceTree = "<group>"; };
 		BF2E484E1EAE887F0059CE7E /* SubSectionsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSectionsRepository.swift; sourceTree = "<group>"; };
 		BF2E48501EAE89040059CE7E /* TestsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsRepository.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				BF8519A31EAC66D000B726FC /* SectionsVC.swift */,
 				BF8519A51EAC68C200B726FC /* SubSectionsVC.swift */,
 				BF8DC96C1EB64E1200F9AEE1 /* MenuViewController.swift */,
+				BF2770561EB6AF5E00522CC2 /* MenuTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				BF2E48571EB517840059CE7E /* LeftRightSegue.swift in Sources */,
 				BF85199E1EABBAB800B726FC /* JobsRepository.swift in Sources */,
 				BF85196D1EA69F6A00B726FC /* charlesTesting.xcdatamodeld in Sources */,
+				BF2770571EB6AF5E00522CC2 /* MenuTableViewCell.swift in Sources */,
 				BF8519A61EAC68C200B726FC /* SubSectionsVC.swift in Sources */,
 				BF8519981EABB71D00B726FC /* Model.swift in Sources */,
 				BF8519921EAABE7B00B726FC /* Constants.swift in Sources */,
